@@ -15,9 +15,12 @@ public class TurnCard : MonoBehaviour
     
     void Update()
     {
-            
+        
     }
-    
-    
+
+    void Turn(Vector3Int position)
+    {
+        
+    }
     
 }
