@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1691982099}
   - component: {fileID: 1691982098}
   m_Layer: 0
-  m_Name: pairLayer
+  m_Name: CoverLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751845169}
+  - component: {fileID: 1751845170}
   - component: {fileID: 1751845168}
   m_Layer: 0
   m_Name: MapManager
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4230b4820cba344bd7f5ffa9685fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pairLayer: {fileID: 2048244918}
+  _coverLayer: {fileID: 2048244918}
   _mainCamera: {fileID: 764102023}
 --- !u!4 &1751845169
 Transform:
@@ -295,6 +296,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751845170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751845167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f7c83034d34e439b4e590d9b75819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _openAnimation: {fileID: 11400000, guid: 771400f299c092a4eaec6ee37a3a230c, type: 2}
+  _closeAnimation: {fileID: 11400000, guid: 9aceed48d12fda94ca125b3b38d4502f, type: 2}
 --- !u!1 &2048244915
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +322,7 @@ GameObject:
   - component: {fileID: 2048244918}
   - component: {fileID: 2048244917}
   m_Layer: 0
-  m_Name: pairLayerTilemap
+  m_Name: CoverLayerTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,9 +443,17 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: afe1aa84f8424fe449805344a2d98885, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: afe22ce87f6c2d04b831a3c6e223e946, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:

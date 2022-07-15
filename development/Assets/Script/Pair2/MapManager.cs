@@ -5,13 +5,13 @@ public class MapManager : MonoBehaviour
 {
 
     [SerializeField] 
-    private Tilemap _pairLayer;
+    private Tilemap _coverLayer;
 
     [SerializeField] 
     private Camera _mainCamera;
-
-    public Vector3Int MapClickPosition { get; set; }
     
+    public Vector3Int MapClickPosition { get; private set; }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -23,12 +23,14 @@ public class MapManager : MonoBehaviour
     private Vector3Int GridClickPosition(Vector3 mousePos)
     {
         Vector3 clickPos;
-        
         Vector3Int res;
         
         clickPos = _mainCamera.ScreenToWorldPoint(mousePos);
-        res = _pairLayer.WorldToCell(clickPos);
+        res = _coverLayer.WorldToCell(clickPos);
+        
         return res;
     }
-    
+
+    public Tilemap GetCoverLayer() => _coverLayer;
+
 }
